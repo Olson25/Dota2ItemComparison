@@ -1,0 +1,90 @@
+﻿@model WebApplication1.Models.BuildModel
+
+@{
+    ViewBag.Title = "Build Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BuildModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Hero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item6)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item6)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoonShardEaten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoonShardEaten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.level)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

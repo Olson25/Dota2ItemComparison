@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="icon"
+          type="image/png"
+          href="\Images\dota_2_hq_icon_by_benashvili-d50zkff.png">
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Build Comparison", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Heroes", "List", "HeroModels")</li>
+                    <li>@Html.ActionLink("Builds", "List", "BuildModels")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content" style="float:right; width:80%">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Dota 2 Build Comparison</p>
+        </footer>
+    </div>
+    <div style="float:left;width:20%; height:100%;">
+    <aside>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Build of the week</h3>
+            </div>
+            <div class="panel-body">
+                <h2>@Html.ActionLink("Check out our Build of the week!", "Details", "BuildModels", new { id = 1 }, null)</h2>
+                <img src="~/Images/Heroes/Earthshaker.png" />
+                <p> For Earthshaker</p>
+
+            </div>
+        </div>
+</aside></div>
+   
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

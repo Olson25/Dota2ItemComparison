@@ -1,0 +1,105 @@
+﻿@model IEnumerable<WebApplication1.Models.HeroModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.heroName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.primaryAttribute)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ranged)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.baseAgi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.baseStr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.baseInt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AgiGain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StrGain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IntGain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.baseSpeed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.baseDamage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.baseArmor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.heroName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.primaryAttribute)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ranged)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.baseAgi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.baseStr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.baseInt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AgiGain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StrGain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IntGain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.baseSpeed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.baseDamage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.baseArmor)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,24 @@
+﻿
+@model IEnumerable <WebApplication1.Models.BuildModel>
+
+@{
+    ViewBag.Title = "ListOfBuildsByHero";
+}
+
+<h2>Builds for @ViewBag.BuildName</h2>
+<table class="table">
+    @foreach( var build in Model)
+    {
+        <tr>
+            <td>
+                @Html.Display(modelItem => build.Item1)<br />
+                @Html.Display(modelItem => build.Item2)<br />
+                @Html.Display(modelItem => build.Item3)<br />
+                @Html.Display(modelItem => build.Item4)<br />
+                @Html.Display(modelItem => build.Item5)<br />
+                @Html.Display(modelItem => build.Item6)<br />
+            </td>
+        </tr>
+    }
+</table>
+
